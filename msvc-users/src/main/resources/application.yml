@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: msvc-users
+  datasource:
+    url: jdbc:mysql://localhost:3306/users?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: true
+
+server:
+  error:
+    include-stacktrace: on_param # isso serve para tirar todas os logs loucos do status 400
+  port: 8001
+# se vc precisar das informa??es , vc usa "trace=true" na URL
